@@ -8,6 +8,9 @@ mailwizz-php:
     - mailwizz-mysql
   environment:
     PHP_php5enmod: 'bcmath gd gmp intl mbstring mysqli pcntl pdo_mysql redis zip sockets'
+    PHP__memory_limit: '128M'
+    PHP__post_max_size: '128M'
+    PHP__upload_max_filesize: '128M'
     PHPFPM__pm: dynamic
     PHPFPM__pm.max_children: 70
     PHPFPM__pm.start_servers: 20
